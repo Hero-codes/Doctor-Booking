@@ -1,26 +1,16 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead, RequestHandler } from "@builder.io/qwik-city";
-
-export const onPost: RequestHandler = ({ json, cookie }) => {
-  cookie.set("token", "POST ROUTE")
-  json(200, { message: 'Hello, POST request here' });
-};
-
-export const onGet: RequestHandler = ({ json, cookie }) => {
-  cookie.set("token", "GET ROUTE")
-  json(200, { message: 'Hello World' });
-};
+import type { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
     <div>
-      Hey There
+
     </div>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "MediCure",
   meta: [
     {
       name: "description",
